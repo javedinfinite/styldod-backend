@@ -4,7 +4,7 @@ const authModel = require('../models/auth')
 require("dotenv").config();
 
 function generateAccessToken(user_details) {
-    return jwt.sign(user_details, process.env.TOKEN_SECRET, { expiresIn: '1h' });//60 //'1h'
+    return jwt.sign(user_details, process.env.TOKEN_SECRET, { expiresIn: '30d' });//60 //'1h'
   }
   
 function generateRefreshToke(username){
