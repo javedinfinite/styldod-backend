@@ -8,7 +8,7 @@ function generateAccessToken(user_details) {
   }
   
 function generateRefreshToke(username){
-    const refresh_token =  jwt.sign(username, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '1h' });
+    const refresh_token =  jwt.sign(username, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '30d' });
     //Update User table with this refresh token
     return refresh_token
 }
